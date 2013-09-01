@@ -7,12 +7,12 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 2
+    colors = true
+    interval = 2
 
-        color_good = "#B5BD68"
-        color_degraded = "#DE935F"
-        color_bad = "#CC6666"
+    color_good = "#B5BD68"
+    color_degraded = "#DE935F"
+    color_bad = "#CC6666"
 }
 
 order += "cpu_usage"
@@ -24,37 +24,37 @@ order += "volume master"
 order += "tztime local"
 
 cpu_usage {
-        format = "%usage"
+    format = "%usage"
 }
 
 cpu_temperature 0 {
-        format = "%degrees°C"
+    format = "%degrees°C"
 }
 
 disk / {
-        format = "%used"
+    format = "%used"
 }
 
 wireless wlp1s0 {
-        format_up = "%essid %quality"
-        format_down = "inet down"
+    format_up = "%essid %quality %ip"
+    format_down = "inet down"
 }
 
 battery 0 {
-        format = "%status %percentage"
-        integer_battery_capacity = true
+    format = "%status %percentage"
+    integer_battery_capacity = true
 
-        threshold_type = "percentage"
-        low_threshold = 5
+    threshold_type = "percentage"
+    low_threshold = 5
 }
 
 volume master {
-        format = "%volume"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+    format = "%volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 tztime local {
-        format = "%H:%M"
+    format = "%H:%M"
 }
