@@ -16,3 +16,4 @@ ln -s vim/vim ~/.vim
 
 # misc
 ln -s misc/Xresources ~/.Xresources
+ln -s misc/gitconfig ~/.gitconfig

@@ -1,0 +1,9 @@
+[user]
+	email = microjoe@mailoo.org
+	name = Romain Porte
+[color]
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	cm = commit
