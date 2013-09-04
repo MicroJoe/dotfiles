@@ -18,3 +18,4 @@ ln -vfs $dir/vim/vim ~/.vim
 
 # misc
 ln -vfs $dir/misc/Xresources ~/.Xresources
+ln -vfs $dir/misc/gitconfig ~/.gitconfig

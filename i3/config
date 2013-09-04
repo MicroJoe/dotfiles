@@ -157,7 +157,7 @@ bar {
         background #1D1F21
         statusline #C5C8C6
 
-        focused_workspace #C5C8C6 #282A2E #C5C8C6
+        focused_workspace #807880 #807880 #282A2E
         inactive_workspace #707880 #1D1F21 #707880
     }
 }
