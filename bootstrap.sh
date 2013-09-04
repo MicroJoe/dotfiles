@@ -5,14 +5,16 @@ if [ ! -d ~/.config ]; then
     mkdir ~/.config
 fi
 
+dir=$(pwd)
+
 # links in .config
-ln -s dunst ~/.config/
-ln -s i3 ~/.config/
-ln -s i3status ~/.config/
+ln -vfs $dir/dunst ~/.config/
+ln -vfs $dir/i3 ~/.config/
+ln -vfs $dir/i3status ~/.config/
 
 # vim
-ln -s vim/vimrc ~/.vimrc
-ln -s vim/vim ~/.vim
+ln -vfs $dir/vim/vimrc ~/.vimrc
+ln -vfs $dir/vim/vim ~/.vim
 
 # misc
-ln -s misc/Xresources ~/.Xresources
+ln -vfs $dir/misc/Xresources ~/.Xresources
