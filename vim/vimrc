@@ -56,3 +56,9 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 " Yaml Configuration
 au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
+
+" Wordwrap
+set tw=79
+set linebreak
+autocmd BufNewFile,BufRead *.txt set wrap
+autocmd BufNewFile,BufRead *.md set wrap
