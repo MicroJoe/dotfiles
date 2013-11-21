@@ -10,7 +10,6 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $alt Mod1
 set $font -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
 set $TERMINAL urxvtc
 
@@ -40,34 +39,34 @@ bindsym $mod+p exec dmenu_run -fn '$font'
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $alt+h focus left
-bindsym $alt+j focus down
-bindsym $alt+k focus up
-bindsym $alt+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-# bindsym $alt+Left focus left
-# bindsym $alt+Down focus down
-# bindsym $alt+Up focus up
-# bindsym $alt+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
-bindsym $alt+Shift+h move left
-bindsym $alt+Shift+j move down
-bindsym $alt+Shift+k move up
-bindsym $alt+Shift+m move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+m move right
 
 # alternatively, you can use the cursor keys:
 # bindsym $mod+Shift+Left move left
-# bindsym $alt+Shift+Down move down
-# bindsym $alt+Shift+Up move up
-# bindsym $alt+Shift+Right move right
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+m split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -84,10 +83,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $alt+p focus parent
+bindsym $mod+u focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+ampersand workspace number 1
@@ -121,7 +120,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock screen and suspend dunst during this period in order to avoid displaying of notifications above lockscreen
-bindsym $mod+l exec "killall -SIGUSR1 dunst && i3lock -ui ~/img/wallpapers/bluescreen.png --nofork && killall -SIGUSR2 dunst"
+# bindsym $mod+x exec "killall -SIGUSR1 dunst && i3lock -ui ~/img/wallpapers/bluescreen.png --nofork && killall -SIGUSR2 dunst"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -164,7 +163,7 @@ bar {
 
 
 # Appearance
-new_window 1pixel
+#new_window 1pixel
 
 # Media keys
 bindsym XF86AudioPrev exec mpc prev
@@ -180,8 +179,10 @@ bindsym $mod+w exec i3-dtags.sh '$font'
 bindsym $mod+x exec i3-input -F 'rename workspace to %s' -P 'New name: ' -f '$font'
 
 # Scratchpad
-bindsym $mod+m move scratchpad
-bindsym $mod+o scratchpad show
+# bindsym $mod+m move scratchpad
+# bindsym $mod+o scratchpad show
+
+bindsym $mod+a exec ~/bin/hmouse.sh toggle
 
 # Window rules
 for_window [class="^URxvt$" instance="scratchpad"] move scratchpad
