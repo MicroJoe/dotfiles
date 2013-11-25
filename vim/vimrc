@@ -24,6 +24,7 @@ set cursorline
 set showcmd
 set colorcolumn=80
 set ruler
+set ls=2
 
 " Theme
 let g:hybrid_use_Xresources = 1
