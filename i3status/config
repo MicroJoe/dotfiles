@@ -19,29 +19,29 @@ order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "disk /"
 order += "wireless wlp1s0"
-order += "battery 0"
 order += "volume master"
+order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
-    format = "%usage"
+    format = " %usage "
 }
 
 cpu_temperature 0 {
-    format = "%degrees°C"
+    format = " %degrees°C "
 }
 
 disk / {
-    format = "%used"
+    format = " / %used "
 }
 
 wireless wlp1s0 {
-    format_up = "%essid %quality %ip"
+    format_up = " wlan %essid %quality %ip "
     format_down = "inet down"
 }
 
 battery 0 {
-    format = "%status %percentage"
+    format = " %status %percentage "
     integer_battery_capacity = true
 
     threshold_type = "percentage"
@@ -49,12 +49,12 @@ battery 0 {
 }
 
 volume master {
-    format = "%volume"
+    format = " vol %volume "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
 }
 
 tztime local {
-    format = "%H:%M"
+    format = " %H:%M "
 }
