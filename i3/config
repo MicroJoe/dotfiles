@@ -163,7 +163,7 @@ bar {
 
 
 # Appearance
-#new_window 1pixel
+new_window 1pixel
 
 # Media keys
 bindsym XF86AudioPrev exec mpc prev
@@ -179,8 +179,8 @@ bindsym $mod+w exec i3-dtags.sh '$font'
 bindsym $mod+x exec i3-input -F 'rename workspace to %s' -P 'New name: ' -f '$font'
 
 # Scratchpad
-# bindsym $mod+m move scratchpad
-# bindsym $mod+o scratchpad show
+bindsym $mod+colon move scratchpad
+bindsym $mod+exclam scratchpad show
 
 bindsym $mod+a exec ~/bin/hmouse.sh toggle
 
