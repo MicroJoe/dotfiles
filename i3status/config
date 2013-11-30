@@ -19,6 +19,7 @@ order += "cpu_usage"
 order += "disk /"
 order += "ethernet enp0s25"
 order += "volume master"
+order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
@@ -26,7 +27,7 @@ cpu_usage {
 }
 
 disk / {
-    format = " disk %used "
+    format = " / %used "
 }
 
 volume master {
