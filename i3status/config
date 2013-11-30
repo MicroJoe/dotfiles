@@ -37,7 +37,7 @@ disk / {
 
 wireless wlp1s0 {
     format_up = " wlan %essid %quality %ip "
-    format_down = "inet down"
+    format_down = " wlan down "
 }
 
 battery 0 {
