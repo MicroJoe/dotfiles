@@ -1,8 +1,20 @@
 set nocompatible
 source ~/.vim/bundles.vim
 
+" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
+
+" GUI options
+if has("gui_running")
+    " GUI TrueType font
+    set guifont=Liberation_Mono:h10:cANSI
+    " Remove useless buttons and menu bar
+    set guioptions-=m
+    set guioptions-=T
+    " Set default window size
+    set lines=30 columns=85
+endif
 
 " Syntax options
 syn on
