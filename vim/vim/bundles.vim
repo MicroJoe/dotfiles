@@ -39,7 +39,7 @@ Bundle 'ervandew/supertab'
 Bundle 'Syntastic'
 Bundle 'Raimondi/delimitMate'
 
-Bundle 'OmniCppComplete'
+Bundle 'Rip-Rip/clang_complete'
 Bundle 'DoxygenToolkit.vim'
 
 filetype plugin indent on
