@@ -31,12 +31,15 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'https://bitbucket.org/MicroJoe/vim-snippets-ada'
 
+" Completion
+Bundle "AutoComplPop"
+
 " Other code stuff
 Bundle 'ervandew/supertab'
 Bundle 'Syntastic'
 Bundle 'Raimondi/delimitMate'
 
-Bundle 'OmniCppComplete'
+Bundle 'Rip-Rip/clang_complete'
 Bundle 'DoxygenToolkit.vim'
 
 filetype plugin indent on

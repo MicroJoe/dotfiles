@@ -1,7 +1,8 @@
 set nocompatible
 source ~/.vim/bundles.vim
 
-set encoding=utf8
+set encoding=utf-8
+set fileencoding=utf-8
 
 " Syntax options
 syn on
@@ -59,7 +60,31 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
 
 " Wordwrap
-set tw=79
+set wrap
 set linebreak
-autocmd BufNewFile,BufRead *.txt set wrap
-autocmd BufNewFile,BufRead *.md set wrap
+
+" Spellchecking
+set spelllang=~/.vim/spell/fr.utf-8.spl
+set spellfile=~/.vim/spell/fr.utf-8.add
+
+
+function SetTextSettings()
+    set tw=79
+    set spell     
+endfunction
+
+autocmd BufNewFile,BufRead *.txt call SetTextSettings()
+autocmd BufNewFile,BufRead *.md  call SetTextSettings()
+autocmd BufNewFile,BufRead *.tex call SetTextSettings()
+
+" Completion
+filetype plugin on
+set completeopt=longest,menuone
+set omnifunc=syntaxcomplete#Complete
+
+" Make the first completion item highlighted by default
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
