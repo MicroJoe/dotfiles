@@ -8,3 +8,5 @@
 	co = checkout
 	cm = commit
     br = branch
+[http]
+	postBuffer = 524288000
