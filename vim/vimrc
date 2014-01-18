@@ -98,11 +98,3 @@ autocmd BufNewFile,BufRead *.tex call SetTextSettings()
 " Completion
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-
-" XP-Template
-" Integration with SuperTab
-let g:xptemplate_key = '<C-Y>'
-let g:xptemplate_minimal_prefix = 'full'
-
-" Removing extra spaces
-let g:xptemplate_vars = "SParg="

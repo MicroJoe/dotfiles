@@ -24,11 +24,6 @@ Bundle 'klen/python-mode'
 " HTML
 Bundle 'mattn/emmet-vim'
 
-" Snippets
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'xptemplate'
-
 " Other code stuff
 Bundle 'ervandew/supertab'
 Bundle 'Syntastic'
