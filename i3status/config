@@ -16,36 +16,18 @@ general {
 }
 
 order += "cpu_usage"
-order += "cpu_temperature 0"
 order += "disk /"
-order += "wireless wlp1s0"
+order += "ethernet enp0s25"
 order += "volume master"
 order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
-    format = " %usage "
-}
-
-cpu_temperature 0 {
-    format = " %degrees°C "
+    format = " proc %usage "
 }
 
 disk / {
     format = " / %used "
-}
-
-wireless wlp1s0 {
-    format_up = " wlan %essid %quality %ip "
-    format_down = " wlan down "
-}
-
-battery 0 {
-    format = " %status %percentage "
-    integer_battery_capacity = true
-
-    threshold_type = "percentage"
-    low_threshold = 5
 }
 
 volume master {
@@ -57,4 +39,9 @@ volume master {
 
 tztime local {
     format = " %H:%M "
+}
+
+ethernet enp0s25 {
+    format_up = " eth %ip "
+    format_down = " eth down "
 }

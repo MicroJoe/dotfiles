@@ -29,7 +29,7 @@ set softtabstop=4
 set smartindent
 
 " Line numbers
-set nu
+set number
 
 " Interface
 set mouse=a
@@ -38,6 +38,10 @@ set showcmd
 set colorcolumn=80
 set ruler
 set ls=2
+
+" Changing leader key for a more azerty-friendly one
+let mapleader = ','
+nmap <silent> <Leader>nu :set relativenumber<CR>
 
 " Theme
 let g:hybrid_use_Xresources = 1
@@ -68,21 +72,23 @@ set backspace=indent,eol,start
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-" Yaml Configuration
+" Yaml folding configuration
 au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
 
 " Wordwrap
 set wrap
 set linebreak
 
+" Showing invisible characters
+set listchars=tab:>-,trail:-
+
+
 " Spellchecking
 set spelllang=~/.vim/spell/fr.utf-8.spl
 set spellfile=~/.vim/spell/fr.utf-8.add
 
-
 function SetTextSettings()
     set tw=79
-    set spell     
 endfunction
 
 autocmd BufNewFile,BufRead *.txt call SetTextSettings()
@@ -91,12 +97,12 @@ autocmd BufNewFile,BufRead *.tex call SetTextSettings()
 
 " Completion
 filetype plugin on
-set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 
-" Make the first completion item highlighted by default
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" XP-Template
+" Integration with SuperTab
+let g:xptemplate_key = '<C-Y>'
+let g:xptemplate_minimal_prefix = 'full'
 
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" Removing extra spaces
+let g:xptemplate_vars = "SParg="
