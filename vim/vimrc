@@ -51,11 +51,6 @@ let mapleader = ','
 " Leader bindings
 nmap <silent> <Leader>nu :set relativenumber<CR>
 
-" Theme
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-set background=dark
-
 " Delete all useless whitespaces at the end of each line on saving
 autocmd BufWritePre * :%s/\s+$//e
 
@@ -78,8 +73,9 @@ au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
 set wrap
 set linebreak
 
-" Showing invisible characters
-set listchars=tab:>-,trail:-
+" Showing invisible characters with cool unicode chars
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:\u237D"
+set list
 
 " Spellchecking
 set spelllang=~/.vim/spell/fr.utf-8.spl

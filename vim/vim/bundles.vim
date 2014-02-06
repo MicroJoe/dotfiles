@@ -22,6 +22,9 @@ Bundle 'gmarik/vundle'
 " Theme
 Bundle 'w0ng/vim-hybrid'
 
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+
 " Markdown support
 Bundle 'tpope/vim-markdown'
 
@@ -30,6 +33,8 @@ Bundle 'omlet.vim'
 
 " Python mode for Vim
 Bundle 'klen/python-mode'
+
+let g:pymode_rope = 0
 
 " ZenCoding for Vim, rapid HTML expanding tool
 Bundle 'mattn/emmet-vim'
