@@ -33,7 +33,7 @@ set mouse=a
 
 " Interface
 set number
-set cursorline
+set cursorline cursorcolumn
 set showcmd
 set colorcolumn=80
 set ruler
