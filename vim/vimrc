@@ -38,6 +38,7 @@ set cursorline cursorcolumn
 set showcmd
 set colorcolumn=80
 set ruler
+set scrolloff=3
 set ls=2
 
 " Searching
@@ -45,6 +46,10 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" Faster scrolldown
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " Changing leader key for a more azerty-friendly one
 let mapleader = ','
