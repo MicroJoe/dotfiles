@@ -33,6 +33,7 @@ set mouse=a
 
 " Interface
 set number
+set relativenumber
 set cursorline cursorcolumn
 set showcmd
 set colorcolumn=80
@@ -49,7 +50,7 @@ set smartcase
 let mapleader = ','
 
 " Leader bindings
-nmap <silent> <Leader>nu :set relativenumber<CR>
+" nmap <silent> <Leader>nu :set relativenumber<CR>
 
 " Delete all useless whitespaces at the end of each line on saving
 autocmd BufWritePre * :%s/\s+$//e

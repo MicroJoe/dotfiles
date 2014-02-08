@@ -25,6 +25,8 @@ Bundle 'w0ng/vim-hybrid'
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 
+Bundle 'Lokaltog/vim-powerline'
+
 " Markdown support
 Bundle 'tpope/vim-markdown'
 
