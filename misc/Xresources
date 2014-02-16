@@ -1,7 +1,7 @@
 ! .Xresources file
 
-URxvt*font: -*-gohufont-medium-r-normal-*-14-*-*-*-*-*-*-*
-URxvt*boldFont: -*-gohufont-bold-r-normal-*-14-*-*-*-*-*-*-*
+URxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+URxvt*boldFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
 
 URxvt*scrollBar: false
 URxvt*transparent: true

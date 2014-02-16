@@ -15,9 +15,11 @@ general {
     color_bad = "#CC6666"
 }
 
+order += "wireless wlp1s0"
+order += "ethernet enp3s0"
 order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "disk /"
-order += "ethernet enp0s25"
 order += "volume master"
 order += "battery 0"
 order += "tztime local"
@@ -26,12 +28,17 @@ cpu_usage {
     format = " proc %usage "
 }
 
+cpu_temperature 0 {
+    format = " %degrees °C "
+}
+
 disk / {
     format = " / %used "
 }
 
 volume master {
     format = " vol %volume "
+    format_muted = " muted "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
@@ -41,7 +48,18 @@ tztime local {
     format = " %H:%M "
 }
 
-ethernet enp0s25 {
+ethernet enp3s0 {
     format_up = " eth %ip "
     format_down = " eth down "
+}
+
+wireless wlp1s0 {
+    format_up = " wlan %quality %essid %ip "
+    format_down = " wlan down "
+}
+
+battery 0 {
+    format = " %status %percentage "
+    format_down = " no bat "
+    low_threshold = 10
 }
