@@ -44,6 +44,8 @@ Bundle 'mattn/emmet-vim'
 " Tab should perform as an IDE tab key;
 Bundle 'ervandew/supertab'
 
+let g:SuperTabCrMapping = 0
+
 " Syntastic, because viewing errors while editing a file is great.
 Bundle 'Syntastic'
 
@@ -52,6 +54,8 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " Double parenthesis, brackets, …
 Bundle 'Raimondi/delimitMate'
+
+let g:delimitMate_expand_cr = 1
 
 " Hell yeah best C++ documentation tool ever
 Bundle 'DoxygenToolkit.vim'
