@@ -69,8 +69,9 @@ endif
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Add json syntax highlighting
+" Custom syntax highlighting for specific extensions
 au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.eliom set ft=ocaml
 
 " Yaml folding configuration
 au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
