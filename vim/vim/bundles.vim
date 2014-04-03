@@ -31,7 +31,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-markdown'
 
 " OCaml intendation helper
-Bundle 'omlet.vim'
+Bundle 'def-lkb/ocp-indent-vim'
+set rtp+=~/.vim/bundle/ocp-indent-vim
 
 " Python mode for Vim
 Bundle 'klen/python-mode'
