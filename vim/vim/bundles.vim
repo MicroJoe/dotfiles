@@ -65,5 +65,15 @@ Bundle 'DoxygenToolkit.vim'
 
 let g:DoxygenToolkit_commentType = "C++"
 
+" Merlin handling
+" It is not a bundle but still a plugin and is used here because of the
+" vimrc's aim to stay generic.
+
+let s:ocamlmerlin=substitute(system('opam config var share'),'\n$','','''') .  "/ocamlmerlin"
+execute "set rtp+=".s:ocamlmerlin."/vim"
+execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
+
+let g:syntastic_ocaml_checkers = ['merlin']
+
 " Activate plugins
 filetype plugin indent on
