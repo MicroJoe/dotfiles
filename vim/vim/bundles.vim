@@ -56,7 +56,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " Double parenthesis, brackets, …
 Bundle 'Raimondi/delimitMate'
 
+" We expand on CR but not with OCaml files since we use ocp-indent for this
 let g:delimitMate_expand_cr = 1
+au BufNewFile,BufRead *.ml let g:delimiitMate_expand_cr = 0
 
 " Hell yeah best C++ documentation tool ever
 Bundle 'DoxygenToolkit.vim'
