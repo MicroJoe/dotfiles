@@ -51,8 +51,9 @@ set smartcase
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-" Changing leader key for a more azerty-friendly one
-let mapleader = ','
+" Changing leader key for a more azerty-friendly one (or not)
+let mapleader = '\'
+let maplocalheader = '\'
 
 " Leader bindings
 " nmap <silent> <Leader>nu :set relativenumber<CR>
