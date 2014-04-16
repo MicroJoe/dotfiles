@@ -172,8 +172,8 @@ bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPlay exec mpc toggle
 
 bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym XF86AudioLowerVolume exec aplay $popsound && amixer -q set Master 2%- unmute
-bindsym XF86AudioRaiseVolume exec aplay $popsound && amixer -q set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec "aplay $popsound ; amixer -q set Master 2%- unmute"
+bindsym XF86AudioRaiseVolume exec "aplay $popsound ; amixer -q set Master 2%+ unmute"
 
 # Dynamic tags
 bindsym $mod+w exec i3-dtags.sh '$font'
