@@ -61,21 +61,30 @@ let maplocalheader = '\'
 " Delete all useless whitespaces at the end of each line on saving
 autocmd BufWritePre * :%s/\s+$//e
 
-" Remember location in file
+" Autocmd stuff
 if has("autocmd")
+    " Remember location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+
+    " Custom syntax highlighting for specific extensions
+    au BufNewFile,BufRead *.json set ft=javascript
+    au BufNewFile,BufRead *.eliom set ft=ocaml
+
+    " Yaml folding configuration
+    au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
+
+    " Autowrap on text files
+    au BufNewFile,BufRead *.txt set tw=79
+    au BufNewFile,BufRead *.md  set tw=79
+    au BufNewFile,BufRead *.tex set tw=79
+
+    " Only indent of 2 spaces in editing OCaml files
+    au BufNewFile,BufRead *.ml set tabstop=2 shiftwidth=2 softtabstop=2
 endif
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" Custom syntax highlighting for specific extensions
-au BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead *.eliom set ft=ocaml
-
-" Yaml folding configuration
-au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
 
 " Wordwrap
 set wrap
@@ -88,15 +97,6 @@ set list
 " Spellchecking
 set spelllang=~/.vim/spell/fr.utf-8.spl
 set spellfile=~/.vim/spell/fr.utf-8.add
-
-" Automatic wrap for certain kind of files (human text ones)
-function SetTextSettings()
-    set tw=79
-endfunction
-
-autocmd BufNewFile,BufRead *.txt call SetTextSettings()
-autocmd BufNewFile,BufRead *.md  call SetTextSettings()
-autocmd BufNewFile,BufRead *.tex call SetTextSettings()
 
 " Completion
 filetype plugin on
