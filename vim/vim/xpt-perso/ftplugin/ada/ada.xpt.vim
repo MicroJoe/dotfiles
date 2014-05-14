@@ -1,14 +1,14 @@
 XPTemplate priority=personal
 
 XPT proc hint=Procedure\ definition.
-procedure `1^ProcedureName^\ `args?^ is
+procedure `1^ProcedureName^` `args?^ is
 begin
     `cursor^
 end `1^;
 
 
 XPT procd hint=Procedure\ declaration.
-procedure `ProcName^ (`args?^);`cursor^
+procedure `ProcName^` `args?^;`cursor^
 
 
 XPT fun hint=Function\ definition.

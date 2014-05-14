@@ -47,6 +47,8 @@ Bundle 'drmingdrmer/xptemplate'
 
 let g:xptemplate_vars = "SParg=&BRfun= "
 let g:xptemplate_brace_complete = ''
+let g:xptemplate_fallback = '<Plug>supertabKey'
+let g:xptemplate_key = '<Tab>'
 
 set runtimepath+=~/.vim/xpt-perso
 
@@ -54,6 +56,7 @@ set runtimepath+=~/.vim/xpt-perso
 Bundle 'ervandew/supertab'
 
 let g:SuperTabCrMapping = 0
+let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " Syntastic, because viewing errors while editing a file is great.
 Bundle 'Syntastic'
