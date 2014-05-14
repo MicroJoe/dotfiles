@@ -42,6 +42,14 @@ let g:pymode_rope = 0
 " ZenCoding for Vim, rapid HTML expanding tool
 Bundle 'mattn/emmet-vim'
 
+" XPTemplate
+Bundle 'drmingdrmer/xptemplate'
+
+let g:xptemplate_vars = "SParg=&BRfun= "
+let g:xptemplate_brace_complete = ''
+
+set runtimepath+=~/.vim/xpt-perso
+
 " Tab should perform as an IDE tab key;
 Bundle 'ervandew/supertab'
 
