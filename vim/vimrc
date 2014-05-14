@@ -41,6 +41,12 @@ set ruler
 set scrolloff=3
 set ls=2
 
+" Easier way to navigate between windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Searching
 set hlsearch
 set incsearch
