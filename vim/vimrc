@@ -8,7 +8,11 @@ set fileencoding=utf-8
 " GUI options
 if has("gui_running")
     " GUI TrueType font
-    set guifont=Liberation_Mono:h10:cANSI
+    if has("win32") || has("win16")
+        set guifont=Liberation_Mono:h10:cANSI
+    else
+        set guifont=DejaVu\ Sans\ Mono\ 10
+    endif
     " Remove useless buttons and menu bar
     set guioptions-=m
     set guioptions-=T
