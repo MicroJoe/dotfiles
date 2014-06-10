@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $font -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+set $font -*-gohufont-medium-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
 set $TERMINAL urxvtc
 
 # The pop sound played on lower volume and raise volume. If the file is not
