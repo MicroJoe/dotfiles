@@ -15,13 +15,19 @@ general {
     color_bad = "#CC6666"
 }
 
-order += "wireless wlp1s0"
+ifdef(`USE_WLAN',`dnl
+order += "wireless WLAN_IFACE"
+',)dnl
 order += "ethernet enp3s0"
 order += "cpu_usage"
+ifdef(`USE_CPU_TEMP',`dnl
 order += "cpu_temperature 0"
+',)dnl
 order += "disk /"
 order += "volume master"
+ifdef(`USE_BATTERY',`dnl
 order += "battery 0"
+',)dnl
 order += "tztime local"
 
 cpu_usage {
@@ -53,13 +59,17 @@ ethernet enp3s0 {
     format_down = " eth down "
 }
 
+ifdef(`USE_WLAN',`dnl
 wireless wlp1s0 {
     format_up = " wlan %quality %essid %ip "
     format_down = " wlan down "
 }
+',)dnl
 
+ifdef(`USE_BATTERY',`dnl
 battery 0 {
     format = " %status %percentage "
     format_down = " no bat "
     low_threshold = 10
 }
+',)dnl
