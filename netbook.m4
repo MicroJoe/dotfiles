@@ -2,6 +2,8 @@ include(`colorscheme.m4')
 
 define(`FONT_SIZE', `11')
 
+define(`URXVT_SHADING', `10')
+
 define(`USE_WLAN',)
 define(`WLAN_IFACE', `wlp1s0')
 

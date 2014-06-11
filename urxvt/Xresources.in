@@ -7,7 +7,9 @@ URxvt*boldFont: -*-gohufont-bold-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
 ! Look
 URxvt*scrollBar: false
 URxvt*transparent: true
-URxvt*shading: 10
+ifdef(`URXVT_SHADING',`dnl
+URxvt*shading: URXVT_SHADING
+',)dnl
 URxvt*visualBell: true
 
 ! URLs handling
