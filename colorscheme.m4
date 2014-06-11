@@ -1,0 +1,25 @@
+define(`COLOR_BACKGROUND', `#1D1F21')
+
+define(`COLOR_BLACK', `#282A2E')
+define(`COLOR_BLACK_LIGHT', `#373B41')
+
+define(`COLOR_RED', `#A54242')
+define(`COLOR_RED_LIGHT', `#CC6666')
+
+define(`COLOR_YELLOW', `#DE935F')
+define(`COLOR_YELLOW_LIGHT', `#F0C674')
+
+define(`COLOR_GREEN', `#8C9440')
+define(`COLOR_GREEN_LIGHT', `#B5BD68')
+
+define(`COLOR_BLUE', `#5F819D')
+define(`COLOR_BLUE_LIGHT', `#81A2BE')
+
+define(`COLOR_MAGENTA', `#85678F')
+define(`COLOR_MAGENTA_LIGHT', `#B294BB')
+
+define(`COLOR_CYAN', `#5E8D87')
+define(`COLOR_CYAN_LIGHT', `#8ABEB7')
+
+define(`COLOR_WHITE', `#707880')
+define(`COLOR_WHITE_LIGHT', `#C5C8C6')

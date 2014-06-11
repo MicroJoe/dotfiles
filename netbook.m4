@@ -1,3 +1,5 @@
+include(`colorscheme.m4')
+
 define(`FONT_SIZE', `11')
 
 define(`USE_WLAN',)

@@ -1,57 +1,44 @@
 ! .Xresources file
 
+! Font
 URxvt*font: -*-gohufont-medium-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
 URxvt*boldFont: -*-gohufont-bold-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
 
+! Look
 URxvt*scrollBar: false
 URxvt*transparent: true
 URxvt*shading: 10
-
 URxvt*visualBell: true
 
 ! URLs handling
-
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 
-! Tomorrow-Night Palette
-#define t_background #1D1F21
-#define t_current_line #282A2E
-#define t_selection #373B41
-#define t_foreground #C5C8C6
-#define t_comment #707880
-#define t_red #CC6666
-#define t_orange #DE935F
-#define t_yellow #F0C674
-#define t_green #B5BD68
-#define t_aqua #8ABEB7
-#define t_blue #81A2BE
-#define t_purple #B294BB
-
-*background: t_background
-*foreground: t_foreground
+! Colors
+*background: COLOR_BACKGROUND
+*foreground: COLOR_WHITE_LIGHT
 ! black
-*color0: t_current_line
-*color8: t_selection
+*color0: COLOR_BLACK
+*color8: COLOR_BLACK_LIGHT
 ! red
-*color1: #A54242
-*color9: t_red
+*color1: COLOR_RED
+*color9: COLOR_RED_LIGHT
 ! green
-*color2: #8C9440
-*color10: t_green
+*color2: COLOR_GREEN
+*color10: COLOR_GREEN_LIGHT
 ! yellow
-*color3: t_orange
-*color11: t_yellow
+*color3: COLOR_YELLOW
+*color11: COLOR_YELLOW_LIGHT
 ! blue
-*color4: #5F819D
-*color12: t_blue
+*color4: COLOR_BLUE
+*color12: COLOR_BLUE_LIGHT
 ! magenta
-*color5: #85678F
-*color13: t_purple
+*color5: COLOR_MAGENTA
+*color13: COLOR_MAGENTA_LIGHT
 ! cyan
-*color6: #5E8D87
-*color14: t_aqua
+*color6: COLOR_CYAN
+*color14: COLOR_CYAN_LIGHT
 ! white
-*color7: t_comment
-*color15: t_foreground
+*color7: COLOR_WHITE
+*color15: COLOR_WHITE_LIGHT

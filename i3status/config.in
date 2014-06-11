@@ -10,9 +10,9 @@ general {
     colors = true
     interval = 2
 
-    color_good = "#B5BD68"
-    color_degraded = "#DE935F"
-    color_bad = "#CC6666"
+    color_good = "COLOR_GREEN"
+    color_degraded = "COLOR_YELLOW"
+    color_bad = "COLOR_RED"
 }
 
 ifdef(`USE_WLAN',`dnl
