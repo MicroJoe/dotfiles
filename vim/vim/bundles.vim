@@ -22,10 +22,7 @@ Bundle 'gmarik/vundle'
 " Theme
 Bundle 'w0ng/vim-hybrid'
 
-let g:hybrid_use_Xresources = 1
 colorscheme hybrid
-
-Bundle 'Lokaltog/vim-powerline'
 
 " Markdown support
 Bundle 'tpope/vim-markdown'
@@ -47,16 +44,10 @@ Bundle 'drmingdrmer/xptemplate'
 
 let g:xptemplate_vars = "SParg=&BRfun= "
 let g:xptemplate_brace_complete = ''
-let g:xptemplate_fallback = '<Plug>supertabKey'
+let g:xptemplate_fallback = '<Tab>'
 let g:xptemplate_key = '<Tab>'
 
 set runtimepath+=~/.vim/xpt-perso
-
-" Tab should perform as an IDE tab key;
-Bundle 'ervandew/supertab'
-
-let g:SuperTabCrMapping = 0
-let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " Syntastic, because viewing errors while editing a file is great.
 Bundle 'Syntastic'
