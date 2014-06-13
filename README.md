@@ -9,6 +9,7 @@ Includes configuration for the following programs :
  * oh-my-zsh theme
  * git
  * urxvt
+ * fbterm
 
 You are encouraged to clone this repository and adapt it to your own needs !
 
