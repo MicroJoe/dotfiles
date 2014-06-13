@@ -1,0 +1,47 @@
+# History configuration
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+# Do not record duplicate lines in history
+setopt HIST_IGNORE_DUPS
+
+# Enable VI mode on command line
+bindkey -v
+
+# The following line was added by compinstall
+zstyle :compinstall filename '/home/microjoe/.zshrc'
+
+# Enable autocompletion
+autoload -Uz compinit && compinit
+
+# Custom prompt
+autoload -U promptinit && promptinit
+autoload -U colors && colors
+
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+
+PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[green]%}%m%{$reset_color%} %~ %{$fg[red]%}» %{$reset_color%}"
+RPROMPT=" ${return_code}"
+
+# Aliases
+alias ls="ls --color=auto"
+alias ll="ls -alh"
+alias lls="ls -lh"
+alias clock="tty-clock -c"
+alias ocaml="rlwrap ocaml"
+
+# If we are starting a zsh shell inside fbterm we want to load custom colors
+[ -n FBTERM ] && export TERM=fbterm && sh ~/dotfiles/fbterm/colors.sh.out
+
+# Expand path
+export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin
+
+# Export some useful things
+export EDITOR=vim
+export CC=clang
+export CXX=clang++
+
+# Load OPAM configuration
+. /home/microjoe/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
