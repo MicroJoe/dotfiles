@@ -6,7 +6,7 @@ Includes configuration for the following programs :
  * i3
  * i3status
  * dunst
- * oh-my-zsh theme
+ * zsh
  * git
  * urxvt
  * fbterm
