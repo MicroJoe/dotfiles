@@ -26,13 +26,11 @@ RPROMPT=" ${return_code}"
 
 # Aliases
 alias ls="ls --color=auto"
+alias l="ls -alh"
 alias ll="ls -alh"
 alias lls="ls -lh"
 alias clock="tty-clock -c"
 alias ocaml="rlwrap ocaml"
-
-# If we are starting a zsh shell inside fbterm we want to load custom colors
-[ -n FBTERM ] && export TERM=fbterm && sh ~/dotfiles/fbterm/colors.sh.out
 
 # Expand path
 export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
