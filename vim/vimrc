@@ -1,5 +1,5 @@
 set nocompatible
-source ~/.vim/bundles.vim
+" source ~/.vim/bundles.vim
 
 " Encoding
 set encoding=utf-8
@@ -39,6 +39,7 @@ set mouse=a
 set number
 set relativenumber
 set cursorline cursorcolumn
+
 set showcmd
 set colorcolumn=80
 set ruler
