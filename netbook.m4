@@ -1,6 +1,8 @@
 include(`colorscheme.m4')dnl
 dnl
 define(`FONT_SIZE', `11')dnl
+define(`DUNST_FONT_SIZE', `9')dnl
+define(`DUNST_OFFSET', `17')dnl
 dnl
 define(`URXVT_SHADING', `10')dnl
 dnl
