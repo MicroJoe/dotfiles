@@ -29,6 +29,7 @@ alias ls="ls --color=auto"
 alias l="ls -alh"
 alias ll="ls -alh"
 alias lls="ls -lh"
+alias g="gvim --remote-silent"
 alias clock="tty-clock -c"
 alias ocaml="rlwrap ocaml"
 

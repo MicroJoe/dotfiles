@@ -5,7 +5,7 @@ set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
 
-" GUI options
+" GUI-dependant options
 if has("gui_running")
     " GUI TrueType font
     if has("win32") || has("win16")
@@ -18,11 +18,16 @@ if has("gui_running")
     set guioptions-=T
     " Set default window size
     set lines=30 columns=85
+    " Load Pygments color scheme
+    colo pygments
+else
+    " Use lines only in terminal
+    set cursorline cursorcolumn
+    set background=dark
 endif
 
 " Syntax options
 syn on
-set background=dark
 
 " Indent options
 set showmatch
@@ -38,7 +43,6 @@ set mouse=a
 " Interface
 set number
 set relativenumber
-set cursorline cursorcolumn
 
 set showcmd
 set colorcolumn=80
@@ -58,7 +62,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Faster scrolldown
+" Faster scroll
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
@@ -85,19 +89,13 @@ if has("autocmd")
     au BufNewFile,BufRead *.eliom set ft=ocaml
 
     " Yaml folding configuration
-    au BufRead,BufNewFile *.{yml,yaml} set foldmethod=indent
+    au BufRead,BufNewFile *.{yml,yaml} set ft=yaml
 
-    " Autowrap on text files
-    au BufNewFile,BufRead *.txt set tw=79
-    au BufNewFile,BufRead *.md  set tw=79
-    au BufNewFile,BufRead *.tex set tw=79
+    " Consider Markdown files as text files
+    au BufRead,BufNewFile *.md set ft=markdown
 
     " Autowrap on editing mails
     au BufRead /tmp/mutt-* set tw=79
-
-    " Only indent of 2 spaces in editing OCaml and Haskell files
-    au BufNewFile,BufRead *.ml set tabstop=2 shiftwidth=2 softtabstop=2
-    au BufNewFile,BufRead *.ml set tabstop=2 shiftwidth=2 softtabstop=2
 endif
 
 " Allow backspacing over everything in insert mode
@@ -108,7 +106,7 @@ set wrap
 set linebreak
 
 " Showing invisible characters with cool unicode chars
-exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:\u237D,eol:\u00ac"
+exec "set listchars=tab:\uBB ,trail:\uB7,nbsp:\u237D,eol:\u00ac"
 set list
 
 " Spellchecking
