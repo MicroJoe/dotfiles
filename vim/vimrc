@@ -42,7 +42,6 @@ set mouse=a
 
 " Interface
 set number
-set relativenumber
 
 set showcmd
 set colorcolumn=80
@@ -106,7 +105,7 @@ set wrap
 set linebreak
 
 " Showing invisible characters with cool unicode chars
-exec "set listchars=tab:\uBB ,trail:\uB7,nbsp:\u237D,eol:\u00ac"
+exec "set listchars=tab:\uBB ,trail:\uB7,nbsp:\u237D"
 set list
 
 " Spellchecking
