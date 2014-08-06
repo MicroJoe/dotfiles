@@ -11,15 +11,13 @@ if has("gui_running")
     if has("win32") || has("win16")
         set guifont=Liberation_Mono:h10:cANSI
     else
-        set guifont=DejaVu\ Sans\ Mono\ 10
+        set guifont=Inconsolata\ Medium\ 11
     endif
     " Remove useless buttons and menu bar
     set guioptions-=m
     set guioptions-=T
     " Set default window size
     set lines=30 columns=85
-    " Load Pygments color scheme
-    colo pygments
 else
     " Use lines only in terminal
     set cursorline cursorcolumn
@@ -31,10 +29,8 @@ syn on
 
 " Indent options
 set showmatch
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=4 softtabstop=4 expandtab " Use spaces instead of tabs
+set tabstop=4 " Size of a tab character
 set smartindent
 
 " Mouse is evil, but sometimes useful
@@ -77,6 +73,10 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 
+    " Highlight trailing spaces
+    au ColorScheme * hi ExtraWhitespace ctermbg=red guibg=red
+    au BufWinEnter * match ExtraWhitespace /\s\+$/
+
     " Custom syntax highlighting for specific extensions
     au BufNewFile,BufRead *.json set ft=javascript
     au BufNewFile,BufRead *.eliom set ft=ocaml
@@ -109,3 +109,6 @@ set spellfile=~/.vim/spell/fr.utf-8.add
 " Completion
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+" Finally, color scheme
+colorscheme pygments
