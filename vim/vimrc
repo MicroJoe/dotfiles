@@ -1,5 +1,5 @@
+" Vi sucks
 set nocompatible
-" source ~/.vim/bundles.vim
 
 " Encoding
 set encoding=utf-8
@@ -110,5 +110,11 @@ set spellfile=~/.vim/spell/fr.utf-8.add
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" Finally, color scheme
+" Color scheme
 colorscheme pygments
+
+" If the bundles were installed, load their configuration
+if isdirectory('/home/microjoe/.vim/bundle/') == 1
+    execute pathogen#infect()
+    source ~/.vim/bundles.vim
+endif

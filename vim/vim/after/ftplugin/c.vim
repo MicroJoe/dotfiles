@@ -1,0 +1,1 @@
+inoremap /* /*  */<Left><Left><Left>
