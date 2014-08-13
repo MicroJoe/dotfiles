@@ -32,7 +32,7 @@ configurations have to be available. The `config.sh` script will translate
 these templates into real configuration files with a `.out` suffix and their
 content will depend on the `.m4` file you called the script with.
 
-Example :
+Example:
 
     :::console
     $ ./config.sh netbook.m4

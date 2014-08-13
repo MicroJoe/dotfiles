@@ -1,5 +1,5 @@
 [global]
-    font = gohufont DUNST_FONT_SIZE
+    font = UI_FONT UI_FONT_SIZE
 
     # allow a small subset of html markup:
     # <b>bold</b>
