@@ -1,5 +1,4 @@
 " bundles.vim
-"
 
 " OCaml intendation helper
 " Bundle 'def-lkb/ocp-indent-vim'
@@ -34,6 +33,14 @@ execute "set rtp+=".s:ocamlmerlin."/vim"
 execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
 
 let g:syntastic_ocaml_checkers = ['merlin']
+
+" OCP-Indent handling
+
+let g:ocp_indent_vimfile = system("opam config var share")
+let g:ocp_indent_vimfile = substitute(g:ocp_indent_vimfile, '[\r\n]*$', '', '')
+let g:ocp_indent_vimfile = g:ocp_indent_vimfile . "/vim/syntax/ocp-indent.vim"
+
+autocmd FileType ocaml exec ":source " . g:ocp_indent_vimfile
 
 " Activate plugins
 filetype plugin indent on

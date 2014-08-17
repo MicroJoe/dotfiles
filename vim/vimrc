@@ -45,6 +45,13 @@ set ruler
 set scrolloff=3
 set ls=2
 
+" Allow files to be hidden in order to call :e without having to save
+set hidden
+
+" No audible bell but visual bell instead
+set visualbell
+set noerrorbells
+
 " Searching
 set hlsearch
 set incsearch
@@ -64,17 +71,18 @@ let maplocalleader = ';'
 " Leader bindings
 " nmap <silent> <Leader>nu :set relativenumber<CR>
 
-" Delete all useless whitespaces at the end of each line on saving
-autocmd BufWritePre * :%s/\s+$//e
-
 " Autocmd stuff
 if has("autocmd")
+
+    " Delete all useless whitespaces at the end of each line on saving
+    au BufWritePre * :%s/\s+$//e
+
     " Remember location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 
     " Highlight trailing spaces
-    au ColorScheme * hi ExtraWhitespace ctermbg=red guibg=red
+    au BufWinEnter * hi ExtraWhitespace ctermbg=red guibg=red
     au BufWinEnter * match ExtraWhitespace /\s\+$/
 
     " Custom syntax highlighting for specific extensions
@@ -110,8 +118,10 @@ set spellfile=~/.vim/spell/fr.utf-8.add
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" Color scheme
-colorscheme pygments
+" Color scheme for GUI only
+if has('gui_running')
+    colorscheme pygments
+endif
 
 " If the bundles were installed, load their configuration
 if isdirectory('/home/microjoe/.vim/bundle/') == 1
