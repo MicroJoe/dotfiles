@@ -27,6 +27,8 @@ fi
 # CLI tools
 installConfig "git" "git/gitconfig" ".gitconfig"
 installConfig "zsh" "zsh/zshrc" ".zshrc"
+installConfig "zprofile" "zsh/zprofile" ".zprofile"
+installConfig "dircolors" "zsh/dircolors" ".dircolors"
 
 # Vim
 installConfig "vimrc" "vim/vimrc" ".vimrc"
@@ -36,4 +38,5 @@ installConfig "vim" "vim/vim" ".vim"
 installConfig "i3" "i3/config.out" ".config/i3/config"
 installConfig "i3status" "i3status/config.out" ".config/i3status/config"
 installConfig "dunst" "dunst/dunstrc.out" ".config/dunst/dunstrc"
+
 installConfig "termite" "termite/config.out" ".config/termite/config"
