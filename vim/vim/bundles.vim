@@ -8,7 +8,7 @@
 let g:pymode_rope = 0
 
 " XPTemplate config
-let g:xptemplate_vars = "SParg=&BRfun= "
+let g:xptemplate_vars = "SParg=&BRloop= &BRif= "
 let g:xptemplate_brace_complete = ''
 let g:xptemplate_fallback = '<Tab>'
 let g:xptemplate_key = '<Tab>'
