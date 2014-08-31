@@ -70,6 +70,7 @@ let maplocalleader = ';'
 
 " Leader bindings
 " nmap <silent> <Leader>nu :set relativenumber<CR>
+nnoremap <silent> <Leader>sp :set spell!<CR>
 
 " Autocmd stuff
 if has("autocmd")
