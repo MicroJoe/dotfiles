@@ -1,1 +1,1 @@
-inoremap /* /*  */<Left><Left><Left>
+setlocal noexpandtab
