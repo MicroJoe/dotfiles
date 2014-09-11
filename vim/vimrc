@@ -111,6 +111,9 @@ set linebreak
 exec "set listchars=tab:\uBB ,trail:\uB7,nbsp:\u237D"
 set list
 
+hi NonText ctermfg=8 guifg=grey
+hi SpecialKey ctermfg=8 guifg=grey
+
 " Spellchecking
 set spelllang=~/.vim/spell/fr.utf-8.spl
 set spellfile=~/.vim/spell/fr.utf-8.add
