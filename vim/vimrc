@@ -70,6 +70,7 @@ let maplocalleader = ';'
 
 " Leader bindings
 " nmap <silent> <Leader>nu :set relativenumber<CR>
+nnoremap <silent> <Leader>sp :set spell!<CR>
 
 " Autocmd stuff
 if has("autocmd")
@@ -109,6 +110,9 @@ set linebreak
 " Showing invisible characters with cool unicode chars
 exec "set listchars=tab:\uBB ,trail:\uB7,nbsp:\u237D"
 set list
+
+hi NonText ctermfg=8 guifg=grey
+hi SpecialKey ctermfg=8 guifg=grey
 
 " Spellchecking
 set spelllang=~/.vim/spell/fr.utf-8.spl

@@ -1,6 +1,6 @@
 # MicroJoe's dotfiles
 
-Includes configuration for the following programs :
+Includes configuration for the following programs:
 
  * vim
  * i3
@@ -11,16 +11,18 @@ Includes configuration for the following programs :
  * urxvt
  * fbterm
 
-You are encouraged to clone this repository and adapt it to your own needs !
+You are encouraged to clone this repository and adapt it to your own needs!
 
 ## Overview
 
 This repository contains both raw configuration files and *templates*-based
 configuration files.
 
+## Installing
+
 ### Raw configuration files
 
-Just create symlinks to revelant places, like :
+Just create symlinks to revelant places, like:
 
     :::console
     $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig

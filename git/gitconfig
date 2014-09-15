@@ -7,7 +7,8 @@
 	st = status
 	co = checkout
 	cm = commit
-    br = branch
+    cma = commit --amend
+    br = branch -v
     tlog = log --pretty=oneline --abbrev-commit --decorate --graph --all
 [http]
 	postBuffer = 524288000
