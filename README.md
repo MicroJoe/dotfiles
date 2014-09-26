@@ -10,6 +10,7 @@ Includes configuration for the following programs:
  * git
  * urxvt
  * fbterm
+ * XDG directory names in $HOME
 
 You are encouraged to clone this repository and adapt it to your own needs!
 
