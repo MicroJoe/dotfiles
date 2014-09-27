@@ -98,7 +98,7 @@ if has("autocmd")
     au BufRead,BufNewFile *.md set ft=markdown
 
     " Autowrap on editing mails
-    au BufRead /tmp/mutt-* set tw=79
+    au BufRead /tmp/mutt-* set tw=72 colorcolumn=72
 endif
 
 " Allow backspacing over everything in insert mode
