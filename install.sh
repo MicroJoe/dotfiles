@@ -1,25 +1,25 @@
 #!/bin/bash
 
 function installConfig {
-    echo "Installing configuration for $1..."
+	echo "Installing configuration for $1..."
 
-    # Check that the file (or dir) exists before linking to it
-    if [ ! -f ~/dotfiles/$2 ] && [ ! -d ~/dotfiles/$2 ]; then
-        echo "File ~/dotfiles/$2 not found (maybe run config.sh before)"
-        exit 1
-    fi
+	# Check that the file (or dir) exists before linking to it
+	if [ ! -f ~/dotfiles/$2 ] && [ ! -d ~/dotfiles/$2 ]; then
+		echo "File ~/dotfiles/$2 not found (maybe run config.sh before)"
+		exit 1
+	fi
 
-    # Create required subdirectories before linking
-    mkdir -p ~/$(dirname $3)
+	# Create required subdirectories before linking
+	mkdir -p ~/$(dirname $3)
 
-    # Create link (-i for asking to delete existing links)
-    ln -i -s ~/dotfiles/$2 ~/$3
+	# Create link (-i for asking to delete existing links)
+	ln -i -s ~/dotfiles/$2 ~/$3
 }
 
 # Check that the ~/dotfiles directory exists before we do anything
 if [ ! -d ~/dotfiles ]; then
-    echo "Directory ~/dotfiles not found, abort."
-    exit 1
+	echo "Directory ~/dotfiles not found, abort."
+	exit 1
 fi
 
 # Here starts the installConfig calls
