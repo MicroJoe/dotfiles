@@ -21,7 +21,11 @@ autoload -U colors && colors
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-PROMPT="%{$fg[green]%}%n%{$fg[red]%}@%{$fg[green]%}%m%{$reset_color%} %~ %{$fg[red]%}» %{$reset_color%}"
+if [ "`id -u`" -eq 0 ]; then
+    PROMPT="%{$fg[red]%}%n%{$fg[yellow]%}@%{$fg[green]%}%m%{$reset_color%} %~ %{$fg[red]%}» %{$reset_color%}"
+else
+    PROMPT="%{$fg[green]%}%n%{$fg[yellow]%}@%{$fg[green]%}%m%{$reset_color%} %~ %{$fg[red]%}» %{$reset_color%}"
+fi
 RPROMPT=" ${return_code}"
 
 # Aliases

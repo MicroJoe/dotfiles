@@ -40,3 +40,6 @@ installConfig "i3status" "i3status/config.out" ".config/i3status/config"
 installConfig "dunst" "dunst/dunstrc.out" ".config/dunst/dunstrc"
 
 installConfig "termite" "termite/config.out" ".config/termite/config"
+
+# XDG
+installConfig "XDG directories" "xdg/user-dirs.dirs" ".config/user-dirs.dirs"
