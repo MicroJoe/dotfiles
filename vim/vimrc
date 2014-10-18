@@ -13,9 +13,10 @@ if has("gui_running")
     else
         set guifont=Inconsolata\ Medium\ 11
     endif
-    " Remove useless buttons and menu bar
+    " Remove useless buttons, menu bar and scrollbar
     set guioptions-=m
     set guioptions-=T
+    set guioptions-=rL
     " Set default window size
     set lines=30 columns=85
 else
@@ -123,13 +124,15 @@ set spellfile=~/.vim/spell/fr.utf-8.add
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" Color scheme for GUI only
-if has('gui_running')
-    colorscheme pygments
-endif
-
 " If the bundles were installed, load their configuration
 if isdirectory('/home/microjoe/.vim/bundle/') == 1
     execute pathogen#infect()
     source ~/.vim/bundles.vim
 endif
+
+" Color scheme for GUI only
+"if has('gui_running')
+"    colorscheme pygments
+"endif
+
+colorscheme nucolors
