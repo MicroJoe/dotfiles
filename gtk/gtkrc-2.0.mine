@@ -1,0 +1,14 @@
+# Disable resize handle
+style "no-resize-handle"
+{
+    GtkWindow::resize-grip-height = 0
+    GtkWindow::resize-grip-width = 0
+}
+
+class "GtkWidget" style "no-resize-handle"
+
+# Set vim borders to vim color scheme background color
+style "vimfix" {
+  bg[NORMAL] = "#151515"
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
