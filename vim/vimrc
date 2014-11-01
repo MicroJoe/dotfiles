@@ -78,7 +78,7 @@ nnoremap <silent> <Leader>b :b#<CR>
 if has("autocmd")
 
     " Delete all useless whitespaces at the end of each line on saving
-    au BufWritePre * :%s/\s+$//e
+    au BufWritePre * :%s/\s\+$//e
 
     " Remember location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -89,17 +89,26 @@ if has("autocmd")
     au BufWinEnter * match ExtraWhitespace /\s\+$/
 
     " Custom syntax highlighting for specific extensions
+
+    " C and C++ files
+    au BufNewFile,BufRead *.h,*.c set ft=c.doxygen
+    au BufNewFile,BufRead *.hpp,*.cpp set ft=cpp.doxygen
+
+    " Yaml and JSON data files
+    au BufRead,BufNewFile *.{yml,yaml} set ft=yaml
     au BufNewFile,BufRead *.json set ft=javascript
+
+    " Eliom files for Ocsigen
     au BufNewFile,BufRead *.eliom set ft=ocaml
 
-    " Yaml folding configuration
-    au BufRead,BufNewFile *.{yml,yaml} set ft=yaml
-
-    " Consider Markdown files as text files
+    " Markdown
     au BufRead,BufNewFile *.md set ft=markdown
+
+    " Other misc autocmds
 
     " Autowrap on editing mails
     au BufRead /tmp/mutt-* set tw=72 colorcolumn=72
+
 endif
 
 " Allow backspacing over everything in insert mode
