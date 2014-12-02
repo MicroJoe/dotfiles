@@ -56,7 +56,7 @@ SAVEHIST=1000
 setopt HIST_IGNORE_DUPS
 
 # Enable VI mode on command line
-bindkey -v
+# bindkey -v
 
 # The following line was added by compinstall
 zstyle :compinstall filename '/home/microjoe/.zshrc'
