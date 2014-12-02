@@ -74,11 +74,19 @@ let maplocalleader = ';'
 nnoremap <silent> <Leader>sp :set spell!<CR>
 nnoremap <silent> <Leader>b :b#<CR>
 
+fun! StripTrailingWhitespace()
+    " Do not strip the whitespaces on these specific filetypes
+    if &ft =~ 'markdown'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+
 " Autocmd stuff
 if has("autocmd")
 
     " Delete all useless whitespaces at the end of each line on saving
-    au BufWritePre * :%s/\s\+$//e
+    au BufWritePre * call StripTrailingWhitespace()
 
     " Remember location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
