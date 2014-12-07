@@ -12,3 +12,5 @@
     tlog = log --pretty=oneline --abbrev-commit --decorate --graph --all
 [http]
 	postBuffer = 524288000
+[push]
+    default = simple
