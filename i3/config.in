@@ -179,7 +179,8 @@ bindsym XF86AudioLowerVolume exec "aplay $popsound ; amixer -q set Master 2%- un
 bindsym XF86AudioRaiseVolume exec "aplay $popsound ; amixer -q set Master 2%+ unmute"
 
 # Dynamic tags
-bindsym $mod+w exec i3-dtags.sh 'UI_FONT-UI_FONT_SIZE'
+bindsym $mod+w exec i3-dtags.sh -fn 'UI_FONT-UI_FONT_SIZE'
+bindsym $mod+Shift+w exec i3-dtags-moveto.sh -fn 'UI_FONT-UI_FONT_SIZE'
 bindsym $mod+x exec i3-input -F 'rename workspace to %s' -P 'New name: ' -f '$font'
 
 # Scratchpad
