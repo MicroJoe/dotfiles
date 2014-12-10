@@ -7,10 +7,10 @@
 	st = status
 	co = checkout
 	cm = commit
-    cma = commit --amend
-    br = branch -v
-    tlog = log --pretty=oneline --abbrev-commit --decorate --graph --all
+	cma = commit --amend
+	br = branch -v
+	tlog = log --pretty=oneline --abbrev-commit --decorate --graph --all
 [http]
 	postBuffer = 524288000
 [push]
-    default = simple
+	default = simple

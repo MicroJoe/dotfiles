@@ -30,7 +30,7 @@ syn on
 
 " Indent options
 set showmatch
-set shiftwidth=4 softtabstop=4 expandtab " Use spaces instead of tabs
+set shiftwidth=4 softtabstop=4
 set tabstop=4 " Size of a tab character
 set smartindent
 
