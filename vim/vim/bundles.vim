@@ -5,7 +5,8 @@
 " set rtp+=~/.vim/bundle/ocp-indent-vim
 
 " Python-mode config
-let g:pymode_rope = 0
+"let g:pymode_rope = 0
+let g:pymode_breakpoint = 0
 
 " XPTemplate config
 let g:xptemplate_vars = "SParg=&BRloop= &BRif= &BRfun= "
@@ -28,7 +29,7 @@ au BufNewFile,BufRead *.ml let g:delimiitMate_expand_cr = 0
 " It is not a bundle but still a plugin and is used here because of the
 " vimrc's aim to stay generic.
 
-let s:ocamlmerlin=substitute(system('opam config var share'),'\n$','','''') .  "/ocamlmerlin"
+let s:ocamlmerlin=substitute(system('opam config var share'),'\n$','','''') .  "/merlin"
 execute "set rtp+=".s:ocamlmerlin."/vim"
 execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
 
