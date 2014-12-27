@@ -24,6 +24,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:delimitMate_expand_cr = 1
 au BufNewFile,BufRead *.ml let g:delimiitMate_expand_cr = 0
 
+" Doxygen config
+let g:DoxygenToolkit_commentType = "C++"
+
 " Merlin handling
 " It is not a bundle but still a plugin and is used here because of the
 " vimrc's aim to stay generic.
