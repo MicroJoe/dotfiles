@@ -1,8 +1,8 @@
 ! .Xresources file
 
 ! Font
-URxvt*font: -*-gohufont-medium-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
-URxvt*boldFont: -*-gohufont-bold-r-normal-*-FONT_SIZE-*-*-*-*-*-*-*
+URxvt*font: xft:Inconsolata Medium:size=9
+URxvt*boldFont: xft:Inconsolata Medium:size=9
 
 ! Look
 URxvt*scrollBar: false
