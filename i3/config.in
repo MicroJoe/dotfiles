@@ -189,5 +189,8 @@ bindsym $mod+exclam scratchpad show
 
 bindsym $mod+a exec ~/bin/hmouse.sh toggle
 
+# Floatting mode
+bindsym $mod+Down floating toggle
+
 # Window rules
 for_window [class="^URxvt$" instance="scratchpad"] move scratchpad
