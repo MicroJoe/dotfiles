@@ -33,46 +33,46 @@ order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
-    format = " proc %usage "
+    format = " ☢ %usage "
 }
 
 cpu_temperature 0 {
-    format = " %degrees °C "
+    format = " 🌡 %degrees °C "
 }
 
 disk / {
-    format = " / %used "
+    format = " 💾 %used "
 }
 
 volume master {
-    format = " vol %volume "
-    format_muted = " muted "
+    format = " 🔊 %volume "
+    format_muted = " 🔇 muted "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
 }
 
 tztime local {
-    format = " %H:%M "
+    format = " 🕓 %H:%M "
 }
 
 ifdef(`USE_LAN',`dnl
 ethernet LAN_IFACE {
-    format_up = " eth %ip "
-    format_down = " eth down "
+    format_up = " 🔗 %ip "
+    format_down = " 🔗 "
 }
 ',)dnl
 
 ifdef(`USE_WLAN',`dnl
 wireless WLAN_IFACE {
-    format_up = " wlan %quality %essid %ip "
-    format_down = " wlan down "
+    format_up = " 📶 %essid %quality "
+    format_down = " 📶 "
 }
 ',)dnl
 
 ifdef(`USE_BATTERY',`dnl
 battery 0 {
-    format = " %status %percentage "
+    format = " 🔋 %status %percentage "
     format_down = " no bat "
     low_threshold = 10
 }
