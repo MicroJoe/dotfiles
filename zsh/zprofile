@@ -1,1 +1,8 @@
+# Call dircolors for colorized ls output to work well
 eval $(dircolors ~/.dircolors)
+
+# Export TERMINAL env var for i3-sensible-terminal
+export TERMINAL=termite
+
+# Automatically start X session if logged in on tty1
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
