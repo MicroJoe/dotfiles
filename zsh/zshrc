@@ -87,7 +87,7 @@ alias clock="tty-clock -c"
 alias ocaml="rlwrap ocaml"
 
 # If using termite, fake use xterm over ssh in order to make colors work
-if [ "$TERM" == "xterm-termite" ]; then
+if [ ! -z "$TERM" -a "$TERM" '==' 'xterm-termite' ]; then
 	alias ssh="TERM=xterm ssh"
 fi
 
