@@ -86,6 +86,11 @@ alias g="gvim --remote-silent"
 alias clock="tty-clock -c"
 alias ocaml="rlwrap ocaml"
 
+# If using termite, fake use xterm over ssh in order to make colors work
+if [ "$TERM" == "xterm-termite" ]; then
+	alias ssh="TERM=xterm ssh"
+fi
+
 # Expand path
 export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin
