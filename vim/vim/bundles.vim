@@ -5,7 +5,7 @@
 " set rtp+=~/.vim/bundle/ocp-indent-vim
 
 " Python-mode config
-"let g:pymode_rope = 0
+let g:pymode_rope = 0
 let g:pymode_breakpoint = 0
 
 " XPTemplate config
@@ -19,6 +19,7 @@ set runtimepath+=~/.vim/xpt-perso
 " Syntastic config
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 " delimitMate config
 " We expand on CR but not with OCaml files since we use ocp-indent for this
