@@ -65,7 +65,7 @@ ethernet LAN_IFACE {
 
 ifdef(`USE_WLAN',`dnl
 wireless WLAN_IFACE {
-    format_up = " 📶 %essid %quality "
+    format_up = " 📶 %quality %essid %ip"
     format_down = " 📶 "
 }
 ',)dnl
