@@ -16,7 +16,7 @@ search_wrap = true
 #geometry = 640x480
 
 # 0.0: opaque, 1.0: transparent
-transparency = 0.1
+transparency = 0.0
 pseudo_transparency = false
 
 # "system", "on" or "off"
@@ -39,7 +39,7 @@ cursor_shape = block
 foreground = #dcdccc
 foreground_bold = #ffffff
 #foreground_dim = #888888
-background = #000000
+background = rgba(0, 0, 0, 0.9)
 #cursor = #dcdccc
 
 # if unset, will reverse foreground and background
