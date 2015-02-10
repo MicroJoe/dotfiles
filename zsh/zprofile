@@ -1,6 +1,3 @@
-# Call dircolors for colorized ls output to work well
-eval $(dircolors ~/.dircolors)
-
 # Export TERMINAL env var for i3-sensible-terminal
 export TERMINAL=termite
 

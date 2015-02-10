@@ -102,4 +102,9 @@ export CC=clang
 export CXX=clang++
 
 # Load OPAM configuration
-. /home/microjoe/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+if [ -d ~/.opam ]; then
+	. ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+fi
+
+# Call dircolors for colorized ls output to work well
+eval $(dircolors ~/.dircolors)
