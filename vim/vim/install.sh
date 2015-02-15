@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 # Install script for vim plugins.
 
-function cloneGithub {
+cloneGithub () {
 	# Use your preferred retrieve method (git clone or zip archive) here
 
 	#cloneGithubGit "$1"
 	cloneGithubZip "$1"
 }
 
-function checkPrg {
+checkPrg () {
 	hash "$1" 2>/dev/null || {
 		echo >&2 "$1 is not installed."
 		echo >&2 "Please install $1 or change installation method in" \
@@ -18,22 +18,32 @@ function checkPrg {
 	}
 }
 
-function cloneGithubGit {
+cloneGithubGit () {
 	checkPrg git
 
     echo "Cloning $1..."
     git clone https://github.com/$1
 }
 
-function cloneGithubZip {
+cloneGithubZip () {
+	repo=$(expr match "$1" '.*/\(.*\)')
+
+	if [ -d "$repo" ]; then
+		echo >&2 "Package $1 already installed, skipping."
+		return
+	fi
+
 	checkPrg unzip
 
 	url="https://github.com/$1/archive/master.zip"
-	repo=$(expr match "$1" '.*/\(.*\)')
 
 	echo "Downloading ZIP snapshot $1"
 
-	wget "$url"
+	wget "$url" || {
+		echo >&2 "Failed to retrieve $1"
+		exit 1
+	}
+
 	unzip master.zip
 	mv "$repo-master" "$repo"
 	rm master.zip
