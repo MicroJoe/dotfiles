@@ -1,8 +1,25 @@
 #!/bin/bash
 
 function cloneGithub {
+	# Use your preferred retrieve method (git clone or zip archive) here
+	cloneGithubZip "$1"
+}
+
+function cloneGithubGit {
     echo "Cloning $1..."
     git clone https://github.com/$1
+}
+
+function cloneGithubZip {
+	url="https://github.com/$1/archive/master.zip"
+	repo=$(expr match "$1" '.*/\(.*\)')
+
+	echo "Downloading ZIP snapshot $1"
+
+	wget "$url"
+	unzip master.zip
+	mv "$repo-master" "$repo"
+	rm master.zip
 }
 
 echo "Creating directories..."
