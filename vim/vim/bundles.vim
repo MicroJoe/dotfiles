@@ -29,6 +29,12 @@ au BufNewFile,BufRead *.ml let g:delimiitMate_expand_cr = 0
 " Doxygen config
 let g:DoxygenToolkit_commentType = "C++"
 
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
 " Merlin handling
 " It is not a bundle but still a plugin and is used here because of the
 " vimrc's aim to stay generic.
