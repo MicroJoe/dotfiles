@@ -113,7 +113,7 @@ if has("autocmd")
     au BufRead,BufNewFile *.md set ft=markdown
 
     " toml files for Rust
-	au BufRead,BufNewFile *.toml set ft=dosini
+	au BufRead,BufNewFile *.{toml,lock} set ft=dosini
 
     " Other misc autocmds
 
