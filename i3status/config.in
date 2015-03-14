@@ -33,46 +33,46 @@ order += "battery 0"
 order += "tztime local"
 
 cpu_usage {
-    format = " ☢ %usage "
+    format = ifdef(`USE_UNICODE', " ☢ %usage ", " cpu %usage ")
 }
 
 cpu_temperature 0 {
-    format = " 🌡 %degrees °C "
+    format = ifdef(`USE_UNICODE', " 🌡 %degrees °C ", " %degrees °C ")
 }
 
 disk / {
-    format = " 💾 %used "
+    format = ifdef(`USE_UNICODE', " 💾 %used ", " / %used ")
 }
 
 volume master {
-    format = " 🔊 %volume "
-    format_muted = " 🔇 muted "
+    format = ifdef(`USE_UNICODE', " 🔊 %volume ", " vol %volume ")
+    format_muted = ifdef(`USE_UNICODE', " 🔇 muted ", " muted ")
     device = "default"
     mixer = "Master"
     mixer_idx = 0
 }
 
 tztime local {
-    format = " 🕓 %H:%M "
+    format = ifdef(`USE_UNICODE', " 🕓 %H:%M ", " %H:%M ")
 }
 
 ifdef(`USE_LAN',`dnl
 ethernet LAN_IFACE {
-    format_up = " 🔗 %ip "
-    format_down = " 🔗 "
+    format_up = ifdef(`USE_UNICODE', " 🔗 %ip ", " eth %ip ")
+    format_down = ifdef(`USE_UNICODE', " 🔗 ", " eth down ")
 }
 ',)dnl
 
 ifdef(`USE_WLAN',`dnl
 wireless WLAN_IFACE {
-    format_up = " 📶 %quality %essid %ip"
-    format_down = " 📶 "
+    format_up = ifdef(`USE_UNICODE', " 📶 %quality %essid %ip", " wlan %quality %essid %ip")
+    format_down = ifdef(`USE_UNICODE', " 📶 ", " wlan down")
 }
 ',)dnl
 
 ifdef(`USE_BATTERY',`dnl
 battery 0 {
-    format = " 🔋 %status %percentage "
+    format = ifdef(`USE_UNICODE', " 🔋 %status %percentage ", " %status %percentage ")
     format_down = " no bat "
     low_threshold = 10
 }
