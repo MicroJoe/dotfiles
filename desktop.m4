@@ -12,3 +12,4 @@ define(`LAN_IFACE', `enp0s25')dnl
 dnl
 define(`URXVT_SHADING', `10')dnl
 define(MOD_KEY, Mod4)dnl
+define(USE_UNICODE,)dnl
