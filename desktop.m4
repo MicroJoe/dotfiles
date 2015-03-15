@@ -1,7 +1,7 @@
 include(`colorscheme.m4')dnl
 dnl
 define(`FONT', `Inconsolata')dnl
-define(`FONT_SIZE', `11')dnl
+define(`FONT_SIZE', `12')dnl
 dnl
 define(`UI_FONT', `Noto Sans')dnl
 define(`UI_FONT_SIZE', `9')dnl

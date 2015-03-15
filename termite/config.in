@@ -36,9 +36,11 @@ cursor_shape = block
 #size_hints = false
 
 [colors]
+#foreground = #505005
 foreground = #dcdccc
 foreground_bold = #ffffff
 #foreground_dim = #888888
+#background = #ffffff
 background = #000000
 #cursor = #dcdccc
 
