@@ -1,11 +1,17 @@
 #!/bin/bash
 
+# Dotfiles directory path, we suppose the user run the script in the current
+# dotfiles directory.
+DOTFILES_PATH=$(pwd)
+
 function installConfig {
 	echo "Installing configuration for $1..."
 
+	path="$DOTFILES_PATH/$2"
+
 	# Check that the file (or dir) exists before linking to it
-	if [ ! -f ~/dotfiles/$2 ] && [ ! -d ~/dotfiles/$2 ]; then
-		echo "File ~/dotfiles/$2 not found (maybe run config.sh before)"
+	if [ ! -f "$path" ] && [ ! -d "$path" ]; then
+		echo "File $path not found (maybe run config.sh before)"
 		exit 1
 	fi
 
@@ -13,14 +19,8 @@ function installConfig {
 	mkdir -p ~/$(dirname $3)
 
 	# Create link (-i for asking to delete existing links)
-	ln -i -s ~/dotfiles/$2 ~/$3
+	ln -i -s "$path" ~/$3
 }
-
-# Check that the ~/dotfiles directory exists before we do anything
-if [ ! -d ~/dotfiles ]; then
-	echo "Directory ~/dotfiles not found, abort."
-	exit 1
-fi
 
 # Here starts the installConfig calls
 

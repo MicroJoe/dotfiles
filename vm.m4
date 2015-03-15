@@ -11,3 +11,4 @@ define(`USE_LAN',)dnl
 define(`LAN_IFACE', `enp0s3')dnl
 dnl
 define(`URXVT_SHADING', `10')dnl
+define(MOD_KEY, Mod1)dnl

@@ -17,3 +17,5 @@ define(`USE_CPU_TEMP',)dnl
 dnl
 define(`USE_LAN',)dnl
 define(`LAN_IFACE', `enp3s0')dnl
+define(MOD_KEY, Mod4)dnl
+define(USE_UNICODE,)dnl

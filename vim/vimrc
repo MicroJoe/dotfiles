@@ -112,6 +112,9 @@ if has("autocmd")
     " Markdown
     au BufRead,BufNewFile *.md set ft=markdown
 
+    " toml files for Rust
+	au BufRead,BufNewFile *.{toml,lock} set ft=dosini
+
     " Other misc autocmds
 
     " Autowrap on editing mails
