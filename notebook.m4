@@ -17,6 +17,7 @@ define(`USE_CPU_TEMP',)dnl
 dnl
 define(`USE_LAN',)dnl
 define(`LAN_IFACE', `enp2s0')dnl
-
+dnl
 define(MOD_KEY, Mod1)dnl
 define(USE_UNICODE,)dnl
+define(CUSTOM_BRIGHTNESS,)dnl

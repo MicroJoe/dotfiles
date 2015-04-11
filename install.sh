@@ -30,6 +30,10 @@ installConfig "zsh" "zsh/zshrc" ".zshrc"
 installConfig "zprofile" "zsh/zprofile" ".zprofile"
 installConfig "dircolors" "zsh/dircolors" ".dircolors"
 
+# Scripts & utils
+installConfig "pop" "i3/pop.wav" ".pop.wav"
+installConfig "scripts" "scripts" ".scripts"
+
 # Vim
 installConfig "vimrc" "vim/vimrc" ".vimrc"
 installConfig "vim" "vim/vim" ".vim"

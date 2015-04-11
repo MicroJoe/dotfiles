@@ -11,7 +11,7 @@ if has("gui_running")
     if has("win32") || has("win16")
         set guifont=Liberation_Mono:h10:cANSI
     else
-        set guifont=Inconsolata\ Medium\ 12
+        set guifont=Inconsolata\ Medium\ 11
     endif
     " Remove useless buttons, menu bar and scrollbar
     set guioptions-=m
