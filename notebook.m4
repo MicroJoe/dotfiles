@@ -12,7 +12,7 @@ dnl
 define(`USE_WLAN',)dnl
 define(`WLAN_IFACE', `wlp1s0')dnl
 dnl
-define(`USE_BATTERY',)dnl
+define(`USE_BATTERY', 1)dnl
 define(`USE_CPU_TEMP',)dnl
 dnl
 define(`USE_LAN',)dnl
