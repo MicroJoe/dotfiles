@@ -10,7 +10,7 @@ dnl
 define(`URXVT_SHADING', `10')dnl
 dnl
 define(`USE_WLAN',)dnl
-define(`WLAN_IFACE', `wlp1s0')dnl
+define(`WLAN_IFACE', `wlp0s18f2u1')dnl
 dnl
 define(`USE_BATTERY', 1)dnl
 define(`USE_CPU_TEMP',)dnl
