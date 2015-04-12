@@ -168,7 +168,7 @@ bar {
 
 
 # Appearance
-new_window 1pixel
+#new_window 1pixel
 
 # Media keys
 bindsym XF86AudioPrev exec mpc prev
@@ -180,7 +180,7 @@ bindsym XF86AudioLowerVolume exec "aplay $popsound ; amixer -q set Master 2%- un
 bindsym XF86AudioRaiseVolume exec "aplay $popsound ; amixer -q set Master 2%+ unmute"
 
 ifdef(`CUSTOM_BRIGHTNESS',`dnl
-bindsym XF86MonBrightnessUp exec "~/.scripts/brightness.sh inc"
+bindsym XF86MonBrightnessUp   exec "~/.scripts/brightness.sh inc"
 bindsym XF86MonBrightnessDown exec "~/.scripts/brightness.sh dec"
 ',)dnl
 
