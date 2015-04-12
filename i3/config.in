@@ -93,7 +93,7 @@ bindsym $mod+u focus parent
 # focus the child container
 bindsym $mod+d focus child
 
-# switch to workspace
+# switch to workspace, AZERTY layout
 bindsym $mod+ampersand workspace number 1
 bindsym $mod+eacute workspace number 2
 bindsym $mod+quotedbl workspace 3
@@ -105,7 +105,7 @@ bindsym $mod+underscore workspace 8
 bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
-# move focused container to workspace
+# move focused container to workspace, AZERTY layout
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+eacute move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -195,11 +195,5 @@ bindsym $mod+exclam scratchpad show
 
 bindsym $mod+a exec ~/bin/hmouse.sh toggle
 
-# Floatting mode
-bindsym $mod+Left floating toggle
-
 # Lock with customization
 bindsym $mod+Right exec i3lock -i ~/.wall.png -d -I 5 -e
-
-# Window rules
-for_window [class="^URxvt$" instance="scratchpad"] move scratchpad
