@@ -23,3 +23,6 @@ hi Operator guifg=#606060
 hi String guifg=#BA2121
 hi Number guifg=#666666
 hi Boolean guifg=#008000
+
+hi CursorLine   guibg=#D0D0D0
+hi CursorColumn guibg=#D0D0D0

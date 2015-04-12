@@ -17,17 +17,15 @@ if has("gui_running")
     set guioptions-=m
     set guioptions-=T
     set guioptions-=rL
-    " Set default window size
+
+    " Set default window size for non-tiling WM
     set lines=30 columns=85
 else
-    " Use lines only in terminal
-    set cursorline cursorcolumn
     set background=dark
 endif
 
 " Syntax options
 syn on
-
 " Indent options
 set showmatch
 set shiftwidth=4 softtabstop=4
@@ -154,6 +152,13 @@ endif
 "if has('gui_running')
 "    colorscheme pygments
 "endif
+"
+
+if has('gui_running')
+	source ~/.vim/switchSourceHeader.vim
+	nmap <F11> :call SwitchSourceHeader()<CR>
+endif
 
 "colorscheme pygments
 colorscheme nucolors
+set cursorline
