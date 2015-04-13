@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Print the color set of the terminal, as well as some other formatting
 # escape codes.
@@ -7,7 +7,7 @@
 #     \e[xxmTEXT TO ALTER
 #   Starts with \e[ (or \033[ or \x1B[), then the code (xx), then the m letter.
 #   Multiple codes can be passed separated by a semicolon (;).
-# 
+#
 # ESCAPE CODES:
 #   colours:
 #     0..7 = the 8 basic colours,

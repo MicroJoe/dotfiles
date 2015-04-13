@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 # Dotfiles directory path, we suppose the user run the script in the current
 # dotfiles directory.
 DOTFILES_PATH=$(pwd)
 
-function installConfig {
+installConfig () {
 	echo "Installing configuration for $1..."
 
 	path="$DOTFILES_PATH/$2"

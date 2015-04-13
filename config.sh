@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-function usage()
-{
+usage() {
 	echo "usage: config.sh <config_file>"
 }
 
-function replace()
-{
+replace() {
 	files=$(find . -name "*.in")
 
 	for f in $files; do

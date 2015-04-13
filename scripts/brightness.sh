@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 # This script allow users to modify brightness directly by writting into the
 # driver file.

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 lockfile=~/.mouselock
 screen=(1024 600)
