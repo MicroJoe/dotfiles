@@ -1,0 +1,13 @@
+
+! Swap caps lock and escape
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
+
+! Swap PgUp and PgDown by Home and End in order to avoid to press the Fn key
+! (notebook only)
+keysym Prior = Home
+keysym Next = End
+keysym Home = Prior
+keysym End = Next
