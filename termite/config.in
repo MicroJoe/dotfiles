@@ -41,7 +41,7 @@ foreground = #dcdccc
 foreground_bold = #ffffff
 #foreground_dim = #888888
 #background = #ffffff
-background = rgba(0, 0, 0, 0.9)
+background = rgba(0, 0, 0, 0.96)
 #cursor = #dcdccc
 
 # if unset, will reverse foreground and background
