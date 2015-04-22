@@ -179,6 +179,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86AudioLowerVolume exec "aplay $popsound ; amixer -q set Master 2%- unmute"
 bindsym XF86AudioRaiseVolume exec "aplay $popsound ; amixer -q set Master 2%+ unmute"
 
+bindsym XF86Sleep exec "systemctl suspend"
+
 ifdef(`CUSTOM_BRIGHTNESS',`dnl
 bindsym XF86MonBrightnessUp   exec "~/.scripts/brightness.sh inc"
 bindsym XF86MonBrightnessDown exec "~/.scripts/brightness.sh dec"
@@ -197,3 +199,7 @@ bindsym $mod+a exec ~/bin/hmouse.sh toggle
 
 # Lock with customization
 bindsym $mod+Right exec i3lock -i ~/.wall.png -d -I 5 -e
+
+# Custom window rules
+for_window [title="Preferences$"] floating enable
+for_window [class="(?i)mplayer"] floating enable
