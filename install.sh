@@ -16,10 +16,10 @@ installConfig () {
 	fi
 
 	# Create required subdirectories before linking
-	mkdir -p ~/$(dirname $3)
+	mkdir -p "$HOME/$(dirname "$3")"
 
 	# Create link (-i for asking to delete existing links)
-	ln -i -s "$path" ~/$3
+	ln -i -s "$path" "$HOME/$3"
 }
 
 # Here starts the installConfig calls

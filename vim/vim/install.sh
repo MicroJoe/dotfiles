@@ -22,7 +22,7 @@ cloneGithubGit () {
 	checkPrg git
 
     echo "Cloning $1..."
-    git clone https://github.com/$1
+    git clone "https://github.com/$1"
 }
 
 cloneGithubZip () {
