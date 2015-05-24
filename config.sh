@@ -5,16 +5,19 @@ usage() {
 }
 
 replace() {
-	files=$(find . -name "*.in")
+	files=$(find . -name '*.m4')
 
 	for f in $files; do
 		dir=$(dirname $f)
-		filename=$(basename $f .in)
 
-		output="$dir/$filename.out"
+		# Do not compile root config m4 files but files in subdirectories
+		if [ "$dir" != '.' ]; then
+			filename=$(basename $f .m4)
+			output="$dir/$filename.out"
 
-		echo "$f -> $output"
-		m4 $1 $f > $output
+			echo "$f -> $output"
+			m4 $1 $f > $output
+		fi
 	done
 }
 
