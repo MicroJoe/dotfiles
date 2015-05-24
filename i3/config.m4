@@ -209,3 +209,4 @@ for_window [class="(?i)mplayer"] floating enable
 # Borderless windows for fullscreen apps
 for_window [class="Firefox" instance="Navigator"] border 1pixel
 for_window [class="libreoffice"] border 1pixel
+for_window [class="Eclipse"] border 1pixel
