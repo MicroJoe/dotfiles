@@ -106,8 +106,15 @@ export CXX=clang++
 
 # Load OPAM configuration
 if [ -d ~/.opam ]; then
-	. ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+	. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+	# Use 4 cores for building modules
+	export OPAMJOBS=4
 fi
 
 # Call dircolors for colorized ls output to work well
 eval $(dircolors ~/.dircolors)
+
+# Add Rust libraries to library path for Archlinux `rust` package
+if [ -d /usr/lib/rustlib/x86_64-unknown-linux-gnu/lib ]; then
+	export LD_LIBRARY_PATH=/usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/:/usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/:/usr/local/lib
+fi
