@@ -45,6 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # History configuration
@@ -77,13 +78,20 @@ zstyle :compinstall filename '/home/microjoe/.zshrc'
 #fi
 #RPROMPT=" ${return_code}"
 
-# Aliases
+# Magic aliases
 alias ls="ls --color=auto"
 alias sl="ls"
 alias ll="ls -alh"
 alias lls="ls -lh"
 alias g="gvim --remote-silent"
 alias ocaml="rlwrap ocaml"
+alias fehsvg="feh --magick-timeout 1"
+
+# Super useful function (available in shell : $ mkcd test/test)
+mkcd () {
+	dir="$*"
+	mkdir -p "$dir" && cd "$dir"
+}
 
 # If using termite, fake use xterm over ssh in order to make colors work
 if [ ! -z "$TERM" -a "$TERM" '==' 'xterm-termite' ]; then
@@ -117,4 +125,9 @@ eval $(dircolors ~/.dircolors)
 # Add Rust libraries to library path for Archlinux `rust` package
 if [ -d /usr/lib/rustlib/x86_64-unknown-linux-gnu/lib ]; then
 	export LD_LIBRARY_PATH=/usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/:/usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/:/usr/local/lib
+fi
+
+# Include specific local configuration
+if [ -d ~/.zshrc.local ]; then
+	source ~/.zshrc.local
 fi
