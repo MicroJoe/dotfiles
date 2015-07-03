@@ -128,6 +128,6 @@ if [ -d /usr/lib/rustlib/x86_64-unknown-linux-gnu/lib ]; then
 fi
 
 # Include specific local configuration
-if [ -d ~/.zshrc.local ]; then
+if [ -f ~/.zshrc.local ]; then
 	source ~/.zshrc.local
 fi
